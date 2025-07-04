@@ -20,11 +20,11 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final List<TitledNavigationBarItem> items = [
-    TitledNavigationBarItem(title: Text('Home'), icon: Icon(Icons.home)),
-    TitledNavigationBarItem(title: Text('Search'), icon: Icon(Icons.search)),
-    TitledNavigationBarItem(title: Text('Bag'), icon: Icon(Icons.card_travel)),
-    TitledNavigationBarItem(title: Text('Orders'), icon: Icon(Icons.shopping_cart)),
-    TitledNavigationBarItem(title: Text('Profile'), icon: Icon(Icons.person_outline)),
+    TitledNavigationBarItem(title: Text('Home'), icon: Icon(Icons.home), backgroundColor: Colors.white),
+    TitledNavigationBarItem(title: Text('Search'), icon: Icon(Icons.search), backgroundColor: Colors.white),
+    TitledNavigationBarItem(title: Text('Bag'), icon: Icon(Icons.card_travel), backgroundColor: Colors.white),
+    TitledNavigationBarItem(title: Text('Orders'), icon: Icon(Icons.shopping_cart), backgroundColor: Colors.white),
+    TitledNavigationBarItem(title: Text('Profile'), icon: Icon(Icons.person_outline), backgroundColor: Colors.white),
   ];
 
   bool navBarMode = false;

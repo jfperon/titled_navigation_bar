@@ -76,15 +76,15 @@ class _TitledBottomNavigationBarState extends State<TitledBottomNavigationBar> {
   double _getIndicatorPosition(int index) {
     var isLtr = Directionality.of(context) == TextDirection.ltr;
     if (isLtr)
-      return lerpDouble(-1.0, 1.0, index / (items.length - 1))!;
+      return lerpDouble(-1.0, 1.0, index / (items.length - 1)) ?? 0;
     else
-      return lerpDouble(1.0, -1.0, index / (items.length - 1))!;
+      return lerpDouble(1.0, -1.0, index / (items.length - 1)) ?? 0;
   }
 
   @override
   Widget build(BuildContext context) {
     width = MediaQuery.of(context).size.width;
-    activeColor = widget.activeColor ?? Theme.of(context).indicatorColor;
+    activeColor = widget.activeColor ?? Theme.of(context).colorScheme.primary;
 
     return Container(
       height: widget.height + MediaQuery.of(context).viewPadding.bottom,
@@ -154,6 +154,7 @@ class _TitledBottomNavigationBarState extends State<TitledBottomNavigationBar> {
       style: TextStyle(color: reverse ? activeColor : widget.inactiveColor),
     );
   }
+  
 
   Widget _buildItemWidget(TitledNavigationBarItem item, bool isSelected) {
     return Container(
